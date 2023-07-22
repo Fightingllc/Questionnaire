@@ -45,7 +45,8 @@
             在桌面右键打开git Bash 分别执行命令
                   git config --global --get http.proxy
                   git config --global --get https.proxy
-                  git config --global http.sslverify false
+                  
             正常情况下执行以上命令不会返回任何信息，如果有返回信息，说明之前配置过，执行下面命令删除在执行上面的命令即可：
                   git config --global --unset http.proxy
                   git config --global --unset https.proxy
+            如果还是不行，就在git Bash中执行git config --global http.sslverify false 用于禁用SSL证书验证
