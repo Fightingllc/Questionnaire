@@ -2,7 +2,7 @@
  * @Author: morning 2587462340@qq.com
  * @Date: 2023-07-20 22:28:43
  * @LastEditors: Morning
- * @LastEditTime: 2023-07-22 15:06:05
+ * @LastEditTime: 2023-07-22 15:26:40
  * @FilePath: \Questionnaire\README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -37,3 +37,14 @@
 ### 注释插件的使用
       文件注释：ctrl+win+i
       函数注释：ctrl+win+t
+
+### issues
+      git push：报错
+      `fatal: unable to access 'https://github.com/Fightingllc/Questionnaire.git/': Failed to connect to github.com port 443 after 21179 ms: Couldn't connect to server`
+      解决方案：
+            在桌面右键打开git Bash 分别执行两条命令
+                  git config --global --get http.proxy
+                  git config --global --get https.proxy
+            正常情况下执行以上命令不会返回任何信息，如果有返回信息，说明之前配置过，执行下面命令删除在执行上面的命令即可：
+                  git config --global --unset http.proxy
+                  git config --global --unset https.proxy
