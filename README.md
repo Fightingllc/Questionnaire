@@ -5,7 +5,7 @@
  * @Date: 2023-07-22 17:26:46
  * @LastEditors: Morning
  * @Motto: 要有梦想，即使遥远
- * @LastEditTime: 2023-07-22 17:28:16
+ * @LastEditTime: 2023-07-22 17:42:31
 -->
 
 # Questionnaire
@@ -68,5 +68,12 @@
                   ],`
       安装对应VSCode插件：ESlint、Prettier
        npm i husky -D
-       npx husky install
+       npm pkg set scripts.prepare="husky install"
+       npm run prepare  or npx husky install
        npx husky add .husky/pre-commit "npm run lint"
+       npx husky add .husky/pre-commit "npm run format"
+       npx husky add .husky/pre-commit "git add ."
+
+       npm install --save-dev @commitlint/config-conventional @commitlint/cli
+       echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
+       npx husky add .husky/commit-msg  'npx --no -- commitlint --edit ${1}'
