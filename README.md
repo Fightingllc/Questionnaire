@@ -1,11 +1,13 @@
 <!--
- * @Author: morning 2587462340@qq.com
- * @Date: 2023-07-20 22:28:43
+ * @Description: 
+ * @Version: 2.0
+ * @Autor: Morning
+ * @Date: 2023-07-22 17:26:46
  * @LastEditors: Morning
- * @LastEditTime: 2023-07-22 15:37:09
- * @FilePath: \Questionnaire\README.md
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @Motto: 要有梦想，即使遥远
+ * @LastEditTime: 2023-07-22 17:28:16
 -->
+
 # Questionnaire
 问卷调查
 本地dev分支与远程关联
@@ -45,8 +47,26 @@
             在桌面右键打开git Bash 分别执行命令
                   git config --global --get http.proxy
                   git config --global --get https.proxy
-                  
+                  git config --global http.sslverify false
             正常情况下执行以上命令不会返回任何信息，如果有返回信息，说明之前配置过，执行下面命令删除在执行上面的命令即可：
                   git config --global --unset http.proxy
                   git config --global --unset https.proxy
-            如果还是不行，就在git Bash中执行git config --global http.sslverify false 用于禁用SSL证书验证
+      
+### 创建项目
+      npm create vite@latest Qustionnaire-FrontEnd --template react-ts
+      cd .\Qustionnaire-FrontEnd\
+      npm i
+      npm i eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
+      npx eslint --init
+      npm i prettier eslint-config-prettier eslint-plugin-prettier --save-dev
+            配置.eslintrc.cjs:
+                  `"extends": [
+                        "eslint:recommended",
+                        "plugin:@typescript-eslint/recommended",
+                        "plugin:react/recommended",
+                        "plugin:prettier/recommended"
+                  ],`
+      安装对应VSCode插件：ESlint、Prettier
+       npm i husky -D
+       npx husky install
+       npx husky add .husky/pre-commit "npm run lint"
