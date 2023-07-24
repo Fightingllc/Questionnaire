@@ -12,6 +12,7 @@ import QuestionCard, { PropsType } from '../../components/QuestionCard'
 import styles from './common.module.scss'
 import { Typography } from 'antd'
 import { useSearchParams } from 'react-router-dom'
+import { useTitle } from 'ahooks'
 
 const { Title } = Typography
 
@@ -30,6 +31,7 @@ const List: FC = () => {
 
   const [questionList,setQuestionList] = useState(rowQuestionList)
 
+  useTitle('List');
   
   return (
    <>
