@@ -5,7 +5,7 @@
  * @Date: 2023-07-23 22:07:46
  * @LastEditors: Morning
  * @Motto: 要有梦想，即使遥远
- * @LastEditTime: 2023-07-23 23:21:39
+ * @LastEditTime: 2023-07-25 23:23:11
  */
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layouts/MainLayout";
@@ -80,3 +80,9 @@ const router = createBrowserRouter([
 ]);
 
 export default router;
+
+// 常用路由常量
+export const HOME_PATHNAEM = '/'
+export const LOGIN_PATHNAME = '/login'
+export const REGISTER_PATHNAME = '/register'
+export const MANAGE_INDEX_PATHNAME = '/manage/list'

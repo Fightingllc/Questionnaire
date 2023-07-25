@@ -1,0 +1,17 @@
+.container {
+    min-height: calc(100vh - 60px - 72px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+
+    .info {
+        text-align: center;
+
+        button {
+            height: 60px;
+            font-size: 24px;
+        }
+    }
+}

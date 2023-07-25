@@ -1,6 +1,6 @@
 .header {
     padding: 0 24px;
-    background-color: #fff;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 
     .left {
         float: left;
@@ -12,11 +12,11 @@
 }
 
 .main {
-    min-height: calc(100vh - 64px - 71px);
+    min-height: calc(100vh - 60px - 72px);
 }
 
 .footer {
     text-align: center;
-    background: #ccc;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
     border-top: 1px solid #999;
 }

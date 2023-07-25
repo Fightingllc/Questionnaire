@@ -17,6 +17,7 @@ import {
   DeleteOutlined,
 } from "@ant-design/icons";
 import styles from "./ManageLayout.module.scss";
+import { MANAGE_INDEX_PATHNAME } from "../router";
 
 const ManageLayout: FC = () => {
   const nav = useNavigate();
@@ -32,7 +33,7 @@ const ManageLayout: FC = () => {
             </Button>
             <Divider />
             <Button
-              type={pathname.startsWith("/manage/list") ? "primary" : "text"}
+              type={pathname.startsWith(MANAGE_INDEX_PATHNAME) ? "primary" : "text"}
               icon={<BarsOutlined />}
               onClick={() => nav("/manage/list")}
             >
