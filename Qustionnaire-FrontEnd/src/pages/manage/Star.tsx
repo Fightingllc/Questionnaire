@@ -8,6 +8,7 @@
  * @LastEditTime: 2023-07-23 21:48:08
  */
 import { FC } from "react";
+import styles from './common.module.scss'
 
 const Star: FC = () => {
   return (

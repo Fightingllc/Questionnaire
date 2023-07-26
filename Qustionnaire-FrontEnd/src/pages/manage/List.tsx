@@ -5,7 +5,7 @@
  * @Date: 2023-07-23 17:21:15
  * @LastEditors: Morning
  * @Motto: 要有梦想，即使遥远
- * @LastEditTime: 2023-07-23 23:35:38
+ * @LastEditTime: 2023-07-26 22:55:33
  */
 import { FC, useState } from 'react'
 import QuestionCard, { PropsType } from '../../components/QuestionCard'
@@ -41,6 +41,7 @@ const List: FC = () => {
         </div>
         <div className={styles.right}>
           {/* <ListSearch /> */}
+          (搜索)
         </div>
       </div>
       <div className={styles.content}>
@@ -53,6 +54,7 @@ const List: FC = () => {
       </div>
       <div className={styles.footer}>
         {/* <div ref={containerRef}>{LoadMoreContentElem}</div> */}
+        loadMore。。。
       </div>
    </>
   )
