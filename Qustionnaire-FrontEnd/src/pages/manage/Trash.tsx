@@ -5,7 +5,7 @@
  * @Date: 2023-07-23 20:28:59
  * @LastEditors: Morning
  * @Motto: 要有梦想，即使遥远
- * @LastEditTime: 2023-07-27 23:12:31
+ * @LastEditTime: 2023-07-30 22:30:06
  */
 import { FC, useState } from "react";
 import styles from "./common.module.scss";
@@ -21,6 +21,7 @@ import {
 } from "antd";
 import { useTitle } from "ahooks";
 import { ExclamationCircleOutlined } from "@ant-design/icons";
+import ListSearch from "../../components/ListSearch";
 
 const { Title } = Typography;
 const { confirm } = Modal;
@@ -152,8 +153,7 @@ const Trash: FC = () => {
           <Title level={3}>我的问卷</Title>
         </div>
         <div className={styles.right}>
-          {/* <ListSearch /> */}
-          (搜索)
+          <ListSearch />
         </div>
       </div>
       <div className={styles.content}>

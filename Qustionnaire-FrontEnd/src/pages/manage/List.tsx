@@ -5,7 +5,7 @@
  * @Date: 2023-07-23 17:21:15
  * @LastEditors: Morning
  * @Motto: 要有梦想，即使遥远
- * @LastEditTime: 2023-07-27 22:13:41
+ * @LastEditTime: 2023-07-30 21:38:32
  */
 import { FC, useState } from "react";
 import QuestionCard, { PropsType } from "../../components/QuestionCard";
@@ -13,6 +13,7 @@ import styles from "./common.module.scss";
 import { Typography } from "antd";
 import { useSearchParams } from "react-router-dom";
 import { useTitle } from "ahooks";
+import ListSearch from "../../components/ListSearch";
 
 const { Title } = Typography;
 
@@ -68,8 +69,7 @@ const List: FC = () => {
           <Title level={3}>我的问卷</Title>
         </div>
         <div className={styles.right}>
-          {/* <ListSearch /> */}
-          (搜索)
+          <ListSearch />
         </div>
       </div>
       <div className={styles.content}>
