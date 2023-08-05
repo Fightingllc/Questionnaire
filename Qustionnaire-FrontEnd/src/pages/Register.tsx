@@ -5,7 +5,7 @@
  * @Date: 2023-07-23 20:29:31
  * @LastEditors: Morning
  * @Motto: 要有梦想，即使遥远
- * @LastEditTime: 2023-08-01 23:19:24
+ * @LastEditTime: 2023-08-01 23:23:49
  */
 import { FC } from "react";
 import { Form, Input, Button, Checkbox, Space, Typography } from 'antd';
@@ -77,7 +77,7 @@ const Register: FC = () => {
             wrapperCol={{offset: 6,span: 16}}
           >
           <Space>
-            <Button type="primary" htmlType="submit">
+            <Button type="primary" htmlType="submit" className={styles.register_form_button}>
               注册
             </Button>
             <Link to={LOGIN_PATHNAME}>已有账户，请登录</Link>
